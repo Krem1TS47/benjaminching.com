@@ -46,8 +46,8 @@ function Header({ bgColor, darkMode, toggleDarkMode, toggleMenu }) {
         <div>{Title()}</div>
         <div className="flex items-center gap-4">
 
-            <div>{ModeButton(darkMode, toggleDarkMode)}</div>
-            <div>{MenuButton(toggleMenu)}</div>
+            <ModeButton darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+            <MenuButton toggleMenu={toggleMenu} />
         </div>
 
     {/* Add Desktop Navigation Later  */}

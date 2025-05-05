@@ -1,11 +1,11 @@
-import './App.css'
 import Blur from './components/Blur.jsx'
 import FrontPage from './components/FrontPage.jsx';
 import Header from './components/Header.jsx'
+import AboutSection from './components/AboutSection.jsx';
 
 
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 function App() {
@@ -18,10 +18,24 @@ function App() {
     const toggleDarkMode = () => setDarkMode(!darkMode);
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollPosition(window.scrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     const bgColor = darkMode ? 'bg-gray-900' : 'bg-gray-50';
     const textColor = darkMode ? 'text-gray-100' : 'text-gray-800';
     return (
-        <div className={`min-h-screen ${bgColor} ${textColor} transition-colors duration-300`}>
+        <div className={`min-h-screen min-w-screen ${bgColor} ${textColor} transition-colors duration-300`}>
             <Blur darkMode={darkMode} />
             <Header
                 bgColor={bgColor}
@@ -30,6 +44,7 @@ function App() {
                 toggleMenu={toggleMenu}
             />
             <FrontPage darkMode={darkMode} />
+            <AboutSection darkMode={darkMode} scrollPosition={scrollPosition} />
         </div>
     )
 }
