@@ -2,6 +2,7 @@ import Blur from './components/Blur.jsx'
 import FrontPage from './components/FrontPage.jsx';
 import Header from './components/Header.jsx'
 import AboutSection from './components/AboutSection.jsx';
+import Projects from './components/Projects.jsx';
 
 
 
@@ -45,6 +46,7 @@ function App() {
             />
             <FrontPage darkMode={darkMode} />
             <AboutSection darkMode={darkMode} scrollPosition={scrollPosition} />
+            <Projects darkMode={darkMode} />
         </div>
     )
 }

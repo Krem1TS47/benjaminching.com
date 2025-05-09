@@ -30,7 +30,9 @@ function AboutText() {
                 creating user-friendly applications that solve real-world problems.
             </p>
             <p className="mb-6 opacity-80">
-                Outside of school, you can definitely find me playing volleyball.
+                Outside of school, you can definitely find me doing something related to volleyball.
+                Whether it is coaching, playing in a tournment, or just watching a game, I have always
+                been passionate about the sport and love being involved in it.
             </p>
         </>
 
