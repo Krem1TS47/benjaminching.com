@@ -7,8 +7,7 @@ function SelfImage({ scrollPosition }) {
         <div className="w-full md:w-1/2">
             <div className="relative" style={{ transform: `translateY(${scrollPosition * 0.05}px)` }}>
                 <div className="w-full aspect-square overflow-hidden rounded-lg relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-indigo-600 opacity-20"></div>
-                    <img src="/api/placeholder/500/500" alt="Profile" className="w-full h-full object-cover mix-blend-overlay" />
+                    <img src="/benvolleyballphoto.jpg" alt="Profile" className="w-full h-full object-cover mix-blend-overlay" />
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-lg -z-10"></div>
                 <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-pink-600 to-purple-600 rounded-lg -z-10 opacity-60"></div>
@@ -22,7 +21,7 @@ function AboutText() {
         <>
             <h2 className="text-3xl font-bold mb-6 relative inline-block">
                 About Me
-                <div className="absolute h-1 w-1/2 bg-gradient-to-r from-purple-500 to-indigo-600 bottom-0 left-0"></div>
+                <div className="absolute h-1 w-full bg-gradient-to-r from-purple-500 to-indigo-600 bottom-0 left-0"></div>
             </h2>
             <p className="mb-4 opacity-80">
                 Hello! I'm Ben, a passionate student majoring in Computer Science at the University of British Columbia.

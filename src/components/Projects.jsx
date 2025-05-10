@@ -19,14 +19,14 @@ function CreateProject({ darkMode }) {
             title: "Quizio",
             description: "A gamified web application for learning and testing knowledge through self-created quizzes. Made for BCS Hacks 2025.",
             technologies: ["React", "Tailwind CSS", "JavaScript"],
-            image: "/quiziologo.png",
+            image: "/quizioapp.png",
             link: "https://github.com/Krem1TS47/Quizio"
         },
         {
             title: "VBStat210",
             description: "A basic statistics application for volleyball coaches to visualize team performance. Made for CPSC 210.",
             technologies: ["Java", "OOP", "GUI", "UML"],
-            image: "/api/placeholder/400/300",
+            image: "/VBStat210.png",
             link: "#"
         }
     ];
