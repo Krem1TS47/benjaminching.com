@@ -1,4 +1,4 @@
-import { Menu, Moon, Sun } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 
 function Title() {
     return (
@@ -21,37 +21,24 @@ function ModeButton({ darkMode, toggleDarkMode }) {
     );
 }
 
-function MenuButton({ toggleMenu }) {
+
+
+
+
+
+
+
+function Header({ bgColor, darkMode, toggleDarkMode }) {
     return (
-        <button
-            className="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-        >
-            <Menu size={20} />
-        </button>
-    );
-}
-
-
-
-
-
-
-
-
-function Header({ bgColor, darkMode, toggleDarkMode, toggleMenu }) {
-    return(
         <header className={`py-6 px-6 md:px-12 flex justify-between items-center sticky top-0 z-50 ${bgColor} bg-opacity-90 backdrop-blur-sm`}>
-        <div>{Title()}</div>
-        <div className="flex items-center gap-4">
+            <Title />
+            <div className="flex items-center gap-4">
 
-            <ModeButton darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-            <MenuButton toggleMenu={toggleMenu} />
-        </div>
+                <ModeButton darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+            </div>
 
-    {/* Add Desktop Navigation Later  */}
-    </header>
+            {/* Add Desktop Navigation Later  */}
+        </header>
     );
 }
 

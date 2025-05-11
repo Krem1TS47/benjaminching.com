@@ -1,5 +1,5 @@
 import Blur from './components/Blur.jsx'
-import FrontPage from './components/FrontPage.jsx';
+import Typing from './components/Typing.jsx';
 import Header from './components/Header.jsx'
 import AboutSection from './components/AboutSection.jsx';
 import Projects from './components/Projects.jsx';
@@ -13,11 +13,11 @@ function App() {
 
 
     const [darkMode, setDarkMode] = useState(false);
-    const [menuOpen, setMenuOpen] = useState(false);
+
 
 
     const toggleDarkMode = () => setDarkMode(!darkMode);
-    const toggleMenu = () => setMenuOpen(!menuOpen);
+
 
     const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -42,9 +42,8 @@ function App() {
                 bgColor={bgColor}
                 darkMode={darkMode}
                 toggleDarkMode={toggleDarkMode}
-                toggleMenu={toggleMenu}
             />
-            <FrontPage darkMode={darkMode} />
+            <Typing />
             <AboutSection darkMode={darkMode} scrollPosition={scrollPosition} />
             <Projects darkMode={darkMode} />
         </div>
