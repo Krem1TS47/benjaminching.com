@@ -3,10 +3,12 @@ import Typing from './components/Typing.jsx';
 import Header from './components/Header.jsx'
 import AboutSection from './components/AboutSection.jsx';
 import Projects from './components/Projects.jsx';
+import Inquiries from './components/Inquiries.jsx';
 
 
 
 import { useState, useEffect } from 'react';
+
 
 
 function App() {
@@ -46,6 +48,7 @@ function App() {
             <Typing />
             <AboutSection darkMode={darkMode} scrollPosition={scrollPosition} />
             <Projects darkMode={darkMode} />
+            <Inquiries darkMode={darkMode} />
         </div>
     )
 }
