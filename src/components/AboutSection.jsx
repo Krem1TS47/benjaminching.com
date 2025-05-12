@@ -42,7 +42,7 @@ function Logos({ darkMode }) {
     return (
         <div className="flex gap-4">
             <SocialIcon
-                url="https://github.com"
+                url="https://github.com/Krem1TS47"
                 className={`p-3 rounded-full ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'} transition-colors`}
                 aria-label="GitHub"
                 target="_blank"
@@ -50,13 +50,20 @@ function Logos({ darkMode }) {
             />
 
             <SocialIcon
-                url="https://linkedin.com"
+                url="https://www.linkedin.com/in/benjamin-ching-926264300/"
                 className={`p-3 rounded-full ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'} transition-colors`}
                 aria-label="LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
             />
 
+            <SocialIcon
+                url="https://www.instagram.com/benjam._ching/"
+                className={`p-3 rounded-full ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'} transition-colors`}
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+            />
             <SocialIcon
                 url="mailto:benbenching@gmail.com"
                 className={`p-3 rounded-full ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'} transition-colors`}

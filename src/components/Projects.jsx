@@ -27,7 +27,7 @@ function CreateProject({ darkMode }) {
             description: "A basic statistics application for volleyball coaches to visualize team performance. Made for CPSC 210.",
             technologies: ["Java", "OOP", "GUI", "UML"],
             image: "/VBStat210.png",
-            link: "#"
+            link: "https://github.com/Krem1TS47/VBStat210"
         }
     ];
 
@@ -39,7 +39,6 @@ function CreateProject({ darkMode }) {
                 className={`rounded-lg overflow-hidden ${darkMode ? 'bg-gray-900' : 'bg-white'} shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2`}
             >
                 <div className="h-48 overflow-hidden relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-indigo-600 opacity-0 group-hover:opacity-40 transition-opacity z-10"></div>
                     <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 </div>
                 <div className="p-6">

@@ -9,13 +9,13 @@ function Letters() {
         <div className="text-4xl md:text-6xl font-bold text-center font-mono">
             <ReactTyped
                 strings={[
-                    "Tech Enthusiast",
-                    "Aspiring Developer",
-                    "Data Analyst",
-                    "Web Developer",
+                    "Software Development",
+                    "Data Analytics",
+                    "Web Design",
+                    "Backend Engineering",
                 ]}
-                typeSpeed={150}
-                backSpeed={150}
+                typeSpeed={90}
+                backSpeed={125}
                 loop
             />
         </div>
