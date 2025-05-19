@@ -1,4 +1,5 @@
-
+import React, {useState} from 'react'
+import emailjs from '@emailjs/browser'
 
 function TopText() {
     return (
@@ -16,8 +17,52 @@ function TopText() {
 }
 
 function ContactForm() {
+
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
+    const [message, setMessage] = useState('');
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // EmailJS Information
+        const serviceID = 'service_o6s3u6s';
+        const templateID = 'template_w1atuw6';
+        const publicKey = 'smMt6pP9D10w-2Zfu';
+
+
+        // Ojbect containing the template parameters
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            to_name: 'Benjamin Ching',
+            message: message,
+        }
+
+        // Sends the email using EmailJS
+        emailjs.send(serviceID, templateID, templateParams, publicKey)
+        .then(() => {
+            alert('Message sent successfully!');
+            setName('');
+            setEmail('');
+            setSubject('');
+            setMessage('');
+        })
+        .catch((error) => {
+            console.error('Error sending email:', error);
+            alert('Failed to send message. Please try again later.');
+        })
+
+    }
+
+
+
     return (
-        <div className="relative z-10">
+        <form onSubmit={handleSubmit} className='emailForm'>
+            <div className="relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                     <label className="block mb-2">Name</label>
@@ -25,6 +70,8 @@ function ContactForm() {
                         type="text"
                         className={`w-full px-4 py-3 rounded-md border  focus:outline-none transition-colors`}
                         placeholder="Your name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                     />
                 </div>
                 <div>
@@ -33,6 +80,8 @@ function ContactForm() {
                         type="email"
                         className={`w-full px-4 py-3 rounded-md border  focus:outline-none transition-colors`}
                         placeholder="your@email.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
             </div>
@@ -43,6 +92,8 @@ function ContactForm() {
                     type="text"
                     className={`w-full px-4 py-3 rounded-md border  focus:outline-none transition-colors`}
                     placeholder="Project inquiry"
+                    value={subject}
+                    onChange={(e) => setSubject(e.target.value)}
                 />
             </div>
 
@@ -52,6 +103,8 @@ function ContactForm() {
                     className={`w-full px-4 py-3 rounded-md border  focus:outline-none transition-colors`}
                     rows="5"
                     placeholder="Tell me about your project..."
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                 />
             </div>
 
@@ -63,6 +116,8 @@ function ContactForm() {
                 </button>
             </div>
         </div>
+        </form>
+        
     );
 
 }
